@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="ca.milleniummicro.audit">
+	<namespace>AUDIT</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="Audit" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="auditId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+
+		<!-- Other fields -->
+        <column name="eventType" type="String"></column>
+
+		<column name="className" type="String" />
+		<column name="classPk" type="long" />
+		<column name="clientIp" type="String" />
+        <column name="clientHost" type="String"></column>
+		<column name="sessionId" type="String" />
+        <column name="serverName" type="String"></column>
+        <column name="serverPort" type="int"></column>
+        <column name="field" type="String"></column>
+        <column name="oldValue" type="String"></column>
+        <column name="newValue" type="String"></column>
+        <column name="message" type="String"></column>
+		<column name="additionalInfo" type="String" />
+
+		<!-- Order -->
+        <column name="createDate" type="Date"></column>
+        <column name="modifiedDate" type="Date"></column>
+
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+    	<!-- References -->
+
+	</entity>
+</service-builder>

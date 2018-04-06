@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="ca.milleniummicro.audit.model.Audit">
+		<field name="uuid" type="String" />
+		<field name="auditId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="eventType" type="String" />
+		<field name="className" type="String" />
+		<field name="classPk" type="long" />
+		<field name="clientIp" type="String" />
+		<field name="clientHost" type="String" />
+		<field name="sessionId" type="String" />
+		<field name="serverName" type="String" />
+		<field name="serverPort" type="int" />
+		<field name="field" type="String" />
+		<field name="oldValue" type="String">
+			<hint name="max-length">2000000</hint>
+		</field>
+		<field name="newValue" type="String">
+			<hint name="max-length">2000000</hint>
+		</field>
+		<field name="message" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="additionalInfo" type="String">
+			<hint name="max-length">2000000</hint>
+		</field>
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

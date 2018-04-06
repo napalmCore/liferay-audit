@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="ca.milleniummicro.audit.service.impl.AuditLocalServiceImpl" id="ca.milleniummicro.audit.service.AuditLocalService" />
+	<bean class="ca.milleniummicro.audit.service.impl.AuditServiceImpl" id="ca.milleniummicro.audit.service.AuditService" />
+	<bean class="ca.milleniummicro.audit.service.persistence.impl.AuditPersistenceImpl" id="ca.milleniummicro.audit.service.persistence.AuditPersistence" parent="basePersistence" />
+</beans>

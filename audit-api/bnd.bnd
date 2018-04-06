@@ -1,0 +1,12 @@
+Bundle-Name: audit-api
+Bundle-SymbolicName: ca.milleniummicro.audit.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	ca.milleniummicro.audit.exception,\
+	ca.milleniummicro.audit.model,\
+	ca.milleniummicro.audit.service,\
+	ca.milleniummicro.audit.service.persistence,\
+    ca.milleniummicro.audit.router,\
+    ca.milleniummicro.audit.constants,\
+    ca.milleniummicro.audit.actions,\
+    ca.milleniummicro.audit.processor,\
